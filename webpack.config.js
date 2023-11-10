@@ -36,7 +36,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'scripts.js'
+        filename: 'bundle.js'
     },
     module: {
         rules: [
@@ -89,8 +89,7 @@ module.exports = {
         }),
         new ImageminWebpWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Sample App',
-            filename: 'index.html'
+            template: './src/templates/index.html',
         })
     ],
     mode: 'development'
